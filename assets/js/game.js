@@ -5,10 +5,10 @@ var randomNumber = function(min, max) {
     var value = Math.floor(Math.random() * (max - min + 1) + min);
   
     return value;
-};
+  };
   
-// fight function (now with parameter for enemy's object holding name, health, and attack values)
-var fight = function(enemy) {
+  // fight function (now with parameter for enemy's object holding name, health, and attack values)
+  var fight = function(enemy) {
     while (playerInfo.health > 0 && enemy.health > 0) {
       // ask player if they'd like to fight or run
       var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
@@ -67,10 +67,10 @@ var fight = function(enemy) {
         window.alert(playerInfo.name + ' still has ' + playerInfo.health + ' health left.');
       }
     }
-};
+  };
   
-// function to start a new game
-var startGame = function() {
+  // function to start a new game
+  var startGame = function() {
     // reset player stats
     playerInfo.reset();
   
@@ -110,10 +110,10 @@ var startGame = function() {
   
     // after loop ends, we are either out of player.health or enemies to fight, so run the endGame function
     endGame();
-};
+  };
   
-// function to end the entire game
-var endGame = function() {
+  // function to end the entire game
+  var endGame = function() {
     window.alert("The game has now ended. Let's see how you did!");
   
     // if player is still alive, player wins!
@@ -170,7 +170,7 @@ var endGame = function() {
   /* GAME INFORMATION / VARIABLES */
   
   // player information
-var playerInfo = {
+  var playerInfo = {
     name: window.prompt("What is your robot's name?"),
     health: 100,
     attack: 10,
@@ -200,7 +200,7 @@ var playerInfo = {
         window.alert("You don't have enough money!");
       }
     }
-};
+  };
   
   // enemy information
   var enemyInfo = [
@@ -216,15 +216,15 @@ var playerInfo = {
       name: 'Robo Trumble',
       attack: randomNumber(10, 14)
     }
-];
+  ];
   
-console.log(enemyInfo);
-console.log(enemyInfo[0]);
-console.log(enemyInfo[0].name);
-console.log(enemyInfo[0]['attack']);
+  console.log(enemyInfo);
+  console.log(enemyInfo[0]);
+  console.log(enemyInfo[0].name);
+  console.log(enemyInfo[0]['attack']);
   
-/* END GAME INFORMATION / VARIABLES */
+  /* END GAME INFORMATION / VARIABLES */
   
-/* RUN GAME */
-startGame();
+  /* RUN GAME */
+  startGame();
   
