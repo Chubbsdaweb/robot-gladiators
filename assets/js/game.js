@@ -5,6 +5,7 @@ var randomNumber = function(min, max) {
     var value = Math.floor(Math.random() * (max - min) + min);
   
     return value;
+    
   };
   
   // function to check if player wants to fight or skip
